@@ -1,3 +1,3 @@
-from CSE185_tSNE import getAdd
+from CSE185_tSNE import *
 
-print(getAdd.add(1,2))
+try_run.test()
