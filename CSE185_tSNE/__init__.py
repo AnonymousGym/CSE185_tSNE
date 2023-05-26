@@ -3,4 +3,4 @@ import urllib
 import sys
 import os
 
-__all__ = ["getAdd","try_run"]
+__all__ = ["getAdd","try_run","pca"]
