@@ -5,11 +5,18 @@ DRV stands for Dimensional Reduction and Visualization, just like its name, this
 
 Now, we have only pca module ready to be used. We have also completed a few tSNE functions and will continue to test on these during the weekend.
 
+Here is the pip install command to install our package:
+```
+pip install -i https://test.pypi.org/simple/ CSE185-tSNE
+```
+Then, you can import CSE185_tSNE in your python script.
+
+
+Here is the command to update python packages uploaded to TestPyPI.
 ```
 python3 -m pip install --user --upgrade setuptools wheel
 python3 -m pip install --user --upgrade twine
 python3 setup.py sdist bdist_wheel
 ls dist
 python3 -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
-
 ```
