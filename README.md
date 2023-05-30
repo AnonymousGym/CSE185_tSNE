@@ -16,6 +16,8 @@ There are some working commands for Version 2.5:
 
 2. Use pca.run_pca(X) function: You should input a count matrix, and it will return the calculated matrix to you. For detailed usage, you can refer to test.py above. Basically, you should follow the scanpy analysis pipeline, and run our run_pca function with adata.X, which is the count matrix of anndata objects. After running run_pca, you should use leiden method to cluster the data, and then visualize it. You will be able to see the pca plot of your adata object.
 
+# To be brief, you can take a look at test.py. If you install our tSNE tool and run it, you will be able to generate the pca plot.
+
 A simpler version of code instruction is below:
 ```
 X = pd.DataFrame(adata.X)
@@ -29,7 +31,7 @@ sc.tl.leiden(adata)
 sc.tl.umap(adata)
 c = adata.obs.leiden
 ```
-Find out the clusters in the data, so that we can label the pca plot.\
+Find out the clusters in the data, so that we can label the pca plot.
 ```
 Color = [ 'xkcd:red',    'xkcd:green',  'xkcd:yellow',  'xkcd:blue',
           'xkcd:orange', 'xkcd:purple', 'xkcd:cyan',    'xkcd:magenta',
