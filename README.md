@@ -16,7 +16,7 @@ There are some working commands for Version 2.5:
 
 2. Use pca.run_pca(X) function: You should input a count matrix, and it will return the calculated matrix to you. For detailed usage, you can refer to test.py above. Basically, you should follow the scanpy analysis pipeline, and run our run_pca function with adata.X, which is the count matrix of anndata objects. After running run_pca, you should use leiden method to cluster the data, and then visualize it. You will be able to see the pca plot of your adata object.
 
-# To be brief, you can take a look at test.py. If you install our tSNE tool and create a python file, copy the script from test.py and run it, you will be able to generate the pca plot.
+# To be brief, you can take a look at test.py. If you install our tSNE tool, download the test set in the folder large_test and create a python file, copy the script from test.py and run it, you will be able to generate the pca plot.
 
 A simpler version of code instruction is below:
 ```
