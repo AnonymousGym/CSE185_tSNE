@@ -10,6 +10,12 @@ Here is the pip install command to install our package:
 pip install -i https://test.pypi.org/simple/ CSE185-tSNE
 ```
 Then, you can import CSE185_tSNE in your python script.
+
+You should use:
+```
+from CSE185_tSNE import *
+```
+
 There are some working commands for Version 2.5:
 
 1. Use pca.run_pca_test() function: You don't need to specify an input. This function runs on the small pre-labeled dataset small.txt. It will generate a pca plot of small.txt. 
