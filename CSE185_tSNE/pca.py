@@ -5,7 +5,10 @@ import scipy.optimize
 import scipy
 import math                        
 import os
-
+Color = [ 'xkcd:red',    'xkcd:green',  'xkcd:yellow',  'xkcd:blue',
+          'xkcd:orange', 'xkcd:purple', 'xkcd:cyan',    'xkcd:magenta',
+          'xkcd:lime',   'xkcd:pink',   'xkcd:teal',    'xkcd:lavender',
+          'xkcd:brown',  'xkcd:maroon', 'xkcd:olive',   'xkcd:navy' ]
 def pca(x, no_dims = 50):
     (n, d) = x.shape
     x = x - np.tile(np.mean(x, 0), (n, 1))
