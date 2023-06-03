@@ -1,9 +1,9 @@
 # CSE185-DRV
-Version 2.5
+Version 2.6
 
 DRV stands for Dimensional Reduction and Visualization, just like its name, this tool aims to work for the biological datasets that usually have multiple variables with relatively high dimension that people cannot describe any rational tendency by just visualize by eye or use traditional data analysis methods. DRV reduce datasets' dimensions to the most visualizable state and presents only the top significant features in order to describe the trends of the datasets. In order to maintain the data quality, our tool also tries to minimize the loss of relevant information, so the efficiency and accuracy is guaranteed. The final result would be a 2-dimensional graph that illustrate the relationship between the variables.
 
-Now, we have only pca module ready to be used. We have also completed a few tSNE functions and will continue to test on these during the weekend.
+We have completed 3 major functions: pca, small_tsne and large_tsne. The usage can be found in the Github Homepage.
 
 Here is the pip install command to install our package:
 ```
@@ -16,13 +16,13 @@ You should use:
 from CSE185_tSNE import *
 ```
 
-There are some working commands for Version 2.5:
+There are some working commands for Version 2.6:
 
-1. Use pca.run_pca_test() function: You don't need to specify an input. This function runs on the small pre-labeled dataset small.txt. It will generate a pca plot of small.txt. 
+1. Use pca.run_pca(X) function: You should input a count matrix, and it will return the calculated matrix to you. For detailed usage, you can refer to test.py above. Basically, you should follow the scanpy analysis pipeline, and run our run_pca function with adata.X, which is the count matrix of anndata objects. After running run_pca, you should use leiden method to cluster the data, and then visualize it. You will be able to see the pca plot of your adata object.
 
-2. Use pca.run_pca(X) function: You should input a count matrix, and it will return the calculated matrix to you. For detailed usage, you can refer to test.py above. Basically, you should follow the scanpy analysis pipeline, and run our run_pca function with adata.X, which is the count matrix of anndata objects. After running run_pca, you should use leiden method to cluster the data, and then visualize it. You will be able to see the pca plot of your adata object.
+2. Use small_tsne(infile) function: You should download small.txt, and use it as example infile. If you want to use other infile, you can copy its format. 
 
-# To be brief, you can take a look at test.py. If you install our tSNE tool, download the test set in the folder large_test and create a python file, copy the script from test.py and run it, you will be able to generate the pca plot.
+3. Use large_tsne(v,c) function: You should follow the scanpy analysis pipeline and use it. You can find example code in our github. However, our tsne is hard to be used on large count matrices. So we don't expect you to use this function well.
 
 A simpler version of code instruction is below:
 ```

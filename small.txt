@@ -1,4 +1,4 @@
-chard	mushroom	rhubarb	quince	olive	pomegranate	turnip	peach	mustard	rosemary	cauliflower	arugula	grape	avocado	watercress	parsnip	okra	tomato	fig	huckleberry	mango	elderberry	chestnut	pear	type
+chard	mushroom	rhubarb	quince	olive	pomegranate	turnip	peach	mustard	rosemary	cauliflower	arugula	grape	avocado	watercress	parsnip	okra	tomato	fig	huckleberry	mango	elderberry  chestnut	pear	type
 31	0	2	0	53	1	97	44	424	125	56	60	130	1	1	141	72	20	3	7	53	164	1	102	1
 205	150	146	596	135	20	81	201	77	132	156	50	108	147	85	120	131	16	157	104	71	57	53	107	7
 46	64	0	1	222	2	30	69	0	78	95	2	144	0	822	1	278	1	14	77	61	20	60	43	2
