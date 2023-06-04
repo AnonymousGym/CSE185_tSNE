@@ -166,6 +166,6 @@ def large_tsne(v,c):
     target_perplexity = 2.0
     Y, KLdist = my_tsne(v, target_perplexity)
     fig3, ax3 = plt.subplots(1,1)
-    for i in range(X.shape[0]):
+    for i in range(v.shape[0]):
         ax3.plot(Y[i,0], Y[i,1], 'o', markersize=4, mfc='w',mec=Color[int(c[i])])
     plt.show() 
