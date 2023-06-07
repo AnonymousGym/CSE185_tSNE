@@ -18,11 +18,11 @@ from CSE185_tSNE import *
 # Using commands
 There are some working commands for Version 2.7.1:
 
-1. Use pca.run_pca(X) function: You should input a count matrix, and it will return the calculated matrix to you. For detailed usage, you can refer to test.py above. Basically, you should follow the scanpy analysis pipeline, and run our run_pca function with adata.X, which is the count matrix of anndata objects. After running run_pca, you should use leiden method to cluster the data, and then visualize it. You will be able to see the pca plot of your adata object.
+1. Use ```pca.run_pca(X)``` function: You should input a count matrix, and it will return the calculated matrix to you. For detailed usage, you can refer to test.py above. Basically, you should follow the scanpy analysis pipeline, and run our run_pca function with adata.X, which is the count matrix of anndata objects. After running run_pca, you should use leiden method to cluster the data, and then visualize it. You will be able to see the pca plot of your adata object.
 
-2. Use small_tsne(infile) function: You should download small.txt, and use it as example infile. If you want to use other infile, you can refer to its format. Prepare to label the clusters first! You can look at Small_Example.ipynb to find usage examples.
+2. Use ```small_tsne(infile)``` function: You should download small.txt, and use it as example infile. If you want to use other infile, you can refer to its format. Prepare to label the clusters first! You can look at Small_Example.ipynb to find usage examples.
 
-3. Use large_tsne(v,c) function: You should follow the scanpy analysis pipeline and use it. You can find example code in our github. However, our tsne is hard to be used on large count matrices. So we don't expect you to use this function well. You can refer to Large_Example.ipynb to look at the details.
+3. Use ```large_tsne(v,c)``` function: You should follow the scanpy analysis pipeline and use it. You can find example code in our github. However, our tsne is hard to be used on large count matrices. So we don't expect you to use this function well. You can refer to Large_Example.ipynb to look at the details.
 
 After using these functions, you should use various colors to generate your plot! Make sure the number of different colors is enough for your number of clusters. You can update the colors in the ```Colors``` list.
 # Benchmarking
