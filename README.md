@@ -25,8 +25,8 @@ There are some working commands for Version 2.7.1:
 3. Use large_tsne(v,c) function: You should follow the scanpy analysis pipeline and use it. You can find example code in our github. However, our tsne is hard to be used on large count matrices. So we don't expect you to use this function well. You can refer to Large_Example.ipynb to look at the details.
 
 After using these functions, you should use various colors to generate your plot! Make sure the number of different colors is enough for your number of clusters. You can update the colors in the ```Colors``` list.
-
-
+# Benchmarking
+We did the benchmarking with functions timed. All results can be found in the Benchmark.ipynb.
 # Package Maintaining
 Here is the command to update python packages uploaded to TestPyPI.
 ```
