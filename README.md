@@ -20,34 +20,11 @@ There are some working commands for Version 2.7.1:
 
 1. Use pca.run_pca(X) function: You should input a count matrix, and it will return the calculated matrix to you. For detailed usage, you can refer to test.py above. Basically, you should follow the scanpy analysis pipeline, and run our run_pca function with adata.X, which is the count matrix of anndata objects. After running run_pca, you should use leiden method to cluster the data, and then visualize it. You will be able to see the pca plot of your adata object.
 
-2. Use small_tsne(infile) function: You should download small.txt, and use it as example infile. If you want to use other infile, you can refer to its format. Prepare to label the clusters first! You can look at Small_Example.ipynb
+2. Use small_tsne(infile) function: You should download small.txt, and use it as example infile. If you want to use other infile, you can refer to its format. Prepare to label the clusters first! You can look at Small_Example.ipynb to find usage examples.
 
-3. Use large_tsne(v,c) function: You should follow the scanpy analysis pipeline and use it. You can find example code in our github. However, our tsne is hard to be used on large count matrices. So we don't expect you to use this function well.
+3. Use large_tsne(v,c) function: You should follow the scanpy analysis pipeline and use it. You can find example code in our github. However, our tsne is hard to be used on large count matrices. So we don't expect you to use this function well. You can refer to Large_Example.ipynb to look at the details.
 
-A simpler version of code instruction is below:
-```
-X = pd.DataFrame(adata.X)
-X2  = pca.run_pca(X)
-v = X2.astype(np.float32)
-```
-Obtain count matrix and run pca. You will have to cast the result to float type.
-```
-sc.pp.neighbors(adata, n_neighbors=10, n_pcs=40)
-sc.tl.leiden(adata)
-sc.tl.umap(adata)
-c = adata.obs.leiden
-```
-Find out the clusters in the data, so that we can label the pca plot.
-```
-Color = [ 'xkcd:red',    'xkcd:green',  'xkcd:yellow',  'xkcd:blue',
-          'xkcd:orange', 'xkcd:purple', 'xkcd:cyan',    'xkcd:magenta',
-          'xkcd:lime',   'xkcd:pink',   'xkcd:teal',    'xkcd:lavender',
-          'xkcd:brown',  'xkcd:maroon', 'xkcd:olive',   'xkcd:navy']
-for i in range(X.shape[0]):
-    plt.plot(v[i,0], v[i,1], 'o', markersize=4, mfc='w',mec=Color[int(c[i])])
-plt.show()
-```
-Use various colors to generate your plot! Make sure the number of different colors is enough for your number of clusters.
+After using these functions, you should use various colors to generate your plot! Make sure the number of different colors is enough for your number of clusters. You can update the colors in the ```Colors``` list
 
 Here is the command to update python packages uploaded to TestPyPI.
 ```
